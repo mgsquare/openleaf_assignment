@@ -21,7 +21,7 @@ func (s *OrderService) CreateOrder(req models.CreateOrderRequest) (models.Order,
 
 	switch req.Carrier {
 	case "bluedart", "delhivery", "xpressbees":
-		// valid
+
 	default:
 		return models.Order{}, errors.New("unsupported carrier")
 	}
