@@ -45,6 +45,6 @@ func Warn(msg string) {
 	log.Warn(msg)
 }
 
-func Error(msg string) {
-	log.Error(msg)
+func Error(msg string, err error) {
+	log.Error(msg, err)
 }

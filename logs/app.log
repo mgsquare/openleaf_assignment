@@ -1,0 +1,17 @@
+11-01-2026 11:17:43 , 377 | INFO | Logger initialized | logger.go
+11-01-2026 11:17:43 , 378 | INFO | Starting HTTP server on :8080 | logger.go
+11-01-2026 11:30:09 , 408 | WARN | Shutdown signal received | logger.go
+11-01-2026 11:30:09 , 408 | INFO | Server exited gracefully | logger.go
+11-01-2026 11:30:49 , 559 | INFO | Logger initialized | logger.go
+11-01-2026 11:30:49 , 560 | INFO | Starting HTTP server on :8080 | logger.go
+11-01-2026 11:31:49 , 117 | WARN | Shutdown signal received | logger.go
+11-01-2026 11:31:49 , 117 | INFO | Server exited gracefully | logger.go
+11-01-2026 11:31:54 , 825 | INFO | Logger initialized | logger.go
+11-01-2026 11:31:54 , 825 | INFO | Starting HTTP server on :8080 | logger.go
+11-01-2026 11:32:07 , 578 | INFO | order created successfullly | logger.go
+11-01-2026 11:43:03 , 112 | WARN | Shutdown signal received | logger.go
+11-01-2026 11:43:03 , 112 | INFO | Server exited gracefully | logger.go
+11-01-2026 11:43:09 , 283 | INFO | Logger initialized | logger.go
+11-01-2026 11:43:09 , 284 | INFO | Starting HTTP server on :8080 | logger.go
+11-01-2026 11:47:21 , 277 | WARN | Shutdown signal received | logger.go
+11-01-2026 11:47:21 , 277 | INFO | Server exited gracefully | logger.go

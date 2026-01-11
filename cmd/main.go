@@ -29,7 +29,7 @@ func main() {
 	go func() {
 		logger.Info("Starting HTTP server on :8080")
 		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			logger.Error("HTTP server failed to start")
+			logger.Error("HTTP server failed to start", err)
 			os.Exit(1)
 		}
 	}()
@@ -44,7 +44,7 @@ func main() {
 	defer cancel()
 
 	if err := server.Shutdown(ctx); err != nil {
-		logger.Error("Server shutdown failed")
+		logger.Error("Server shutdown failed", err)
 	}
 
 	logger.Info("Server exited gracefully")

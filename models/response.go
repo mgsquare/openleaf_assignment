@@ -5,3 +5,12 @@ type CreateOrderResponse struct {
 	TrackingID string `json:"tracking_id"`
 	Status     string `json:"status"`
 }
+
+type CarrierRate struct {
+	Carrier string  `json:"carrier"`
+	Rate    float64 `json:"rate"`
+}
+
+type RateResponse struct {
+	Rates []CarrierRate `json:"rates"`
+}
