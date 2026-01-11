@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/mgsquare/openleaf_assignment/logger"
 	"github.com/mgsquare/openleaf_assignment/models"
 )
 
@@ -61,12 +62,14 @@ func fetchCarrierRate(carrier string) RateResult {
 
 	switch n {
 	case 0:
+		logger.Info("carrier rates received")
 		return RateResult{
 			Carrier:     carrier,
 			Rate:        float64(rand.Intn(200) + 50),
 			Serviceable: true,
 		}
 	case 1:
+		logger.Error("no response recieved from carrier api", errors.New("Carrier api down"))
 		return RateResult{
 			Carrier: carrier,
 			Err:     errors.New("carrier api failed"),

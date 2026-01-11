@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"github.com/mgsquare/openleaf_assignment/logger"
 	"github.com/mgsquare/openleaf_assignment/models"
 	"github.com/mgsquare/openleaf_assignment/services"
 )
@@ -21,6 +22,7 @@ func (c *RateController) CalculateRates(w http.ResponseWriter, r *http.Request) 
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		http.Error(w, "invalid request body", http.StatusBadRequest)
+		logger.Error("bad request", http.ErrBodyNotAllowed)
 		return
 	}
 

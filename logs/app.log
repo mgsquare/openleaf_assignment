@@ -15,3 +15,10 @@
 11-01-2026 11:43:09 , 284 | INFO | Starting HTTP server on :8080 | logger.go
 11-01-2026 11:47:21 , 277 | WARN | Shutdown signal received | logger.go
 11-01-2026 11:47:21 , 277 | INFO | Server exited gracefully | logger.go
+11-01-2026 11:47:27 , 019 | INFO | Logger initialized | logger.go
+11-01-2026 11:47:27 , 020 | INFO | Starting HTTP server on :8080 | logger.go
+11-01-2026 12:36:29 , 097 | WARN | Shutdown signal received | logger.go
+11-01-2026 12:36:29 , 098 | INFO | Server exited gracefully | logger.go
+11-01-2026 12:36:34 , 528 | INFO | Logger initialized | logger.go
+11-01-2026 12:36:34 , 529 | INFO | Starting HTTP server on :8080 | logger.go
+11-01-2026 12:36:40 , 080 | INFO | tracking events fetched | tracking_id=TRK-12349 | count=2 | logger.go

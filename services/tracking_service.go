@@ -2,9 +2,11 @@ package services
 
 import (
 	"errors"
+	"fmt"
 	"math/rand"
 	"time"
 
+	"github.com/mgsquare/openleaf_assignment/logger"
 	"github.com/mgsquare/openleaf_assignment/models/tracking"
 	"github.com/mgsquare/openleaf_assignment/repository"
 )
@@ -20,8 +22,17 @@ func NewTrackingService(repo *repository.TrackingRepository) *TrackingService {
 func (s *TrackingService) PollTracking(trackingID string) {
 	events, err := fetchCarrierTracking(trackingID)
 	if err != nil {
+		logger.Error("tracking poll failed for carrier", err)
 		return
 	}
+
+	logger.Info(
+		fmt.Sprintf(
+			"tracking events fetched | tracking_id=%s | count=%d",
+			trackingID,
+			len(events),
+		),
+	)
 
 	existing := s.repo.GetEvents(trackingID)
 
